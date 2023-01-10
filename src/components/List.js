@@ -2,11 +2,15 @@ import React from 'react';
 import ListItems from './ListItems';
 
  const List = ({listx}) =>{
+   const numbers=listx;
+
   return(
-    // code here
-    
-      <ListItems  />
-    
+    <>
+    {numbers.map((number) =>
+      <ListItems key={number.toString()}
+                valuex={number} />
+    )}
+  </> 
     
   )
 }
